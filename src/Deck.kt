@@ -2,7 +2,8 @@
  * Created by NIKI on 9/9/2016.
  */
 class Deck {
-    val cards: Array<Card> = Array(52, fun (i : Int): Card {
+    val cards: Array<Card> = Array(52,
+        fun (i : Int): Card {
         val value = i % 13
         val suit = when(i / 13){
             0 -> "Clubs"
