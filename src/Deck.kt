@@ -2,15 +2,13 @@
  * Created by NIKI on 9/9/2016.
  */
 class Deck {
-    val cards: Array<Card> = Array(52,
-        fun (i : Int): Card {
-        val value = i % 13
-        val suit = when(i / 13){
-            0 -> "Clubs"
-            1 -> "Diamonds"
-            2 -> "Hearts"
-            else -> "Spades"
-        }
-        return Card(value, suit)
-    })
+    //Using Lambda Expression Syntax and if you use it Kotlin will automatically generate the property
+    val cards = Array(52, { Card(it % 13, getSuit(it)) })
+
+    private fun  getSuit(i: Int) = when(i / 13) {
+        0 -> "Clubs"
+        1 -> "Diamonds"
+        2 -> "Hearts"
+        else -> "Spades"
+    }
 }
