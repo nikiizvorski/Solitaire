@@ -18,9 +18,9 @@ class Deck {
 
 
     private fun  getSuit(i: Int) = when(i / 13) {
-        0 -> "Clubs"
-        1 -> "Diamonds"
-        2 -> "Hearts"
-        else -> "Spades"
+        0 -> Card.clubs
+        1 -> Card.diamonds
+        2 -> Card.hearts
+        else -> Card.spades
     }
 }
