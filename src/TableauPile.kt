@@ -1,9 +1,10 @@
 /**
  * Created by NIKI on 9/13/2016.
  */
-class TableauPile(var cards: MutableList<Card>) {
+class TableauPile(var cards: MutableList<Card> = mutableListOf()) {
     init {
-        cards.last().faceUp = true
+        if(cards.size > 0)
+            cards.last().faceUp = true
     }
 
     fun addCard(newCards: MutableList<Card>): Boolean {
@@ -17,6 +18,15 @@ class TableauPile(var cards: MutableList<Card>) {
             return true
         }
         return false
+    }
+
+    fun removeCards(tappedIndex : Int) {
+        for (i in tappedIndex..cards.lastIndex){
+            cards.removeAt(tappedIndex)
+        }
+        if(cards.size > 0) {
+            cards.last().faceUp = true
+        }
     }
 
     private fun  suitCheck(c1: Card, c2: Card): Boolean {
