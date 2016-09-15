@@ -1,7 +1,7 @@
 /**
  * Created by NIKI on 9/13/2016.
  */
-class GameModel {
+object GameModel {
     val deck = Deck()
     val wastePile: MutableList<Card> = mutableListOf()
     val foundationPiles = arrayOf(FoundationPile(clubs),
@@ -87,6 +87,10 @@ class GameModel {
             }
         }
         return false
+    }
+
+    fun debugPrint() {
+        println(deck.cardsInDeck.last())
     }
 }
 
