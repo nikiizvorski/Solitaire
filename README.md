@@ -1,5 +1,5 @@
 # Solitaire
-First Kotlin App Solitaire Game 
+First Kotlin App Solitaire Game MVP Pattern
 
 Kotlin is a newer language that runs in a JVM and can be used to develop Android apps. You can interweave Kotlin and Java in the same app, and it brings new features for better safety, readability, and tooling.
 
